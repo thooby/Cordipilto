@@ -1,0 +1,20 @@
+<h1>Listing accesos</h1>
+
+<table>
+  <tr>
+    <th>Descripcion</th>
+  </tr>
+
+<% @accesos.each do |acceso| %>
+  <tr>
+    <td><%=h acceso.descripcion %></td>
+    <td><%= link_to 'Show', acceso %></td>
+    <td><%= link_to 'Edit', edit_acceso_path(acceso) %></td>
+    <td><%= link_to 'Destroy', acceso, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New acceso', new_acceso_path %>

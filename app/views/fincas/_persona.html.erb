@@ -1,0 +1,39 @@
+<div class="persona">
+<% new_or_existing = persona.new_record? ? 'new' : 'existing' %>
+<% prefix = "finca[#{new_or_existing}_persona_attributes][]" %>
+
+<% fields_for prefix, persona do |persona_form| -%>
+  <p>
+    primer nombre: <%= persona_form.text_field :nombre1 %>
+    segundo nombre: <%= persona_form.text_field :nombre2 %><br />
+    primer apellido: <%= persona_form.text_field :apellido1 %>
+    segundo apellido: <%= persona_form.text_field :apellido2 %><br />
+	<%=
+	    @generos =Genero.find(:all)
+	    persona_form.collection_select(:genero_id, @generos, :id, :descripcion )
+	%> 
+	 <!-- Fecha de nacimiento
+ 
+	%= persona_form.date_select :fecha_nac, :index = (persona.new_record? ? '' : nil) %> -->
+	¿Alfabetizado?
+	   <%= @alfabes =Alfabe.find(:all)
+	    persona_form.collection_select(:alfabe_id, @alfabes, :id, :descripcion ) %>
+       Nacionalidad:
+	<%=
+	    @nacionas =Naciona.find(:all)
+	    persona_form.collection_select(:naciona_id, @nacionas, :id, :descripcion )
+	%> Profesión
+	
+	<%=
+	    @profesions =Profesion.find(:all)
+	    persona_form.collection_select(:profesion_id, @profesions, :id, :descripcion )
+	%><br /> Grado de parentesco
+	<%=
+	    @parentescos =Parentesco.find(:all)
+	    persona_form.collection_select(:parentesco_id, @parentescos, :id, :descripcion )
+	%>
+	   Cabeza de familia: <%= persona_form.select :cabeza_familia,[['No',false],['Sí',true]]  %><br />
+    <%= link_to_function "<b>Eliminar persona</b>", "$(this).up('.persona').remove()" %>
+  </p>
+<% end -%>
+</div>

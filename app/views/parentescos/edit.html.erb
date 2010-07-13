@@ -1,0 +1,16 @@
+<h1>Editing parentesco</h1>
+
+<% form_for(@parentesco) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @parentesco %> |
+<%= link_to 'Back', parentescos_path %>

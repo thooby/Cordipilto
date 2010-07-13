@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  finca_id: 1
+  nombre1: MyString
+  nombre2: MyString
+  apellido1: MyString
+  apellido2: MyString
+  fecha_nac: 2010-06-18
+  genero_id: 1
+  alfabe_id: 1
+  naciona_id: 1
+  direccion: MyString
+  profesion_id: 1
+  parentesco_id: 1
+  cabeza_familia: false
+
+two:
+  finca_id: 1
+  nombre1: MyString
+  nombre2: MyString
+  apellido1: MyString
+  apellido2: MyString
+  fecha_nac: 2010-06-18
+  genero_id: 1
+  alfabe_id: 1
+  naciona_id: 1
+  direccion: MyString
+  profesion_id: 1
+  parentesco_id: 1
+  cabeza_familia: false

@@ -1,0 +1,35 @@
+<% if @finca.fotos[0].respond_to?('url') %><div style="float:left;"><img src="/images/fincas/<%= @finca.fotos[0].url%>" style="width:320px; padding-left:10px; padding-right:10px;"><div style="clear:both;"><%= @finca.fotos[0].titulo %></div></div><% end %><p>
+  <h3><%=h @finca.descripcion %></h3>
+</p>
+<p>
+ La finca está situada en el municipio de <%=h @finca.municipio.nombre %> comunidad de  <%=h @finca.comunidade.nombre %>. Fue adquirida por <%=h @finca.adqui.descripcion %>. Se encuentra a una altura de
+  <%=h @finca.altura %> metros y con latitud de <%=h @finca.lat %> y longitud de  <%=h @finca.lon %>
+</p>
+<p>La finca tiene una extensión de <%=h @finca.area_tot %> Mz. estando destinadas a cafetal <%=h @finca.area_cafe %> Mz. 
+	El resto de la finca está destinada <%=h @finca.area_agric %> Mz. a otros cultivos, <%=h @finca.area_bosque %> a bosque, <%=h @finca.area_potrero %> Mz. a potrero y <%=h @finca.area_guat %> Mz. a guatal.
+<p>	
+  El agua se obtiene en <%=h @finca.agua.descripcion %>
+</p>
+
+<p>
+  Sus accesos son <%=h @finca.acceso.descripcion %> y son   <%=h @finca.invier_acceso.descripcion %> en invierno y <%=h @finca.verano_acceso.descripcion %> en verano.
+</p>
+
+<p>
+  Su  suelo de tipo <%=h @finca.tipo_suelo.descripcion%> tiene un color predominantemente <%=h @finca.color_suelo.descripcion %> con una profundidad típica de  <%=h @finca.profun_suelo.descripcion %>. El terreno es mayoritariamente  <%=h @finca.topogra.descripcion %>
+</p>
+
+<p>
+  
+  <%=h @finca.fertiliza.descripcion %> usa fertilizantes
+</p>
+<b>Familia que vive en la finca</b><table id='personas'><% @finca.personas.each do |persona|%>
+<tr><td><%= persona.nombre1 %> <%= persona.nombre2 %> <%= persona.apellido1 %> <%= persona.apellido2 %></td><td> <%= persona.genero.descripcion %> </td><td><%= persona.naciona.descripcion %></td><td> <%= persona.parentesco.descripcion %></td><td>	¿Alfabetizado? <%= persona.alfabe.descripcion %></td></tr>
+<br />
+<% end %></table>
+<div style="clear:both;">
+<%= @finca.municipio.openmapa.codigo_html %>
+</div>
+
+<%= link_to 'Editar', edit_finca_path(@finca) %> |
+<%= link_to 'Hacia atrás', fincas_path %>

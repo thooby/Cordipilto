@@ -1,0 +1,50 @@
+<h1>Listado de fincas</h1>
+
+<table>
+  <tr>
+    <th>Descripcion</th>
+    <th>Agua</th>
+    <th>Area tot</th>
+    <th>Area cafe</th>
+    <th>Adqui</th>
+    <th>Altura</th>
+    <th>Lat</th>
+    <th>Lon</th>
+    <th>Municipio</th>
+    <th>Invier acceso</th>
+    <th>Verano acceso</th>
+    <th>Tipo suelo</th>
+    <th>Color suelo</th>
+    <th>Profun suelo</th>
+    <th>Topogra</th>
+    <th>Fertiliza</th>
+  </tr>
+
+<% @fincas.each do |finca| %>
+  <tr>
+    <td><%=h finca.descripcion %></td>
+    <td><%=h finca.agua.descripcion %></td>
+    <td><%=h finca.area_tot %></td>
+    <td><%=h finca.area_cafe %></td>
+    <td><%=h finca.adqui.descripcion %></td>
+    <td><%=h finca.altura %></td>
+    <td><%=h finca.lat %></td>
+    <td><%=h finca.lon %></td>
+    <td><%=h finca.municipio.nombre %></td>    
+    <td><%=h finca.invier_acceso.descripcion %></td>
+    <td><%=h finca.verano_acceso.descripcion %></td>
+    <td><%=h finca.tipo_suelo.descripcion %></td>
+    <td><%=h finca.color_suelo.descripcion %></td>
+    <td><%=h finca.profun_suelo.descripcion %></td>
+    <td><%=h finca.topogra.descripcion %></td>
+    <td><%=h finca.fertiliza.descripcion %></td>
+    <td><%= link_to 'Mostrar', finca %></td>
+    <td><%= link_to 'Editar', edit_finca_path(finca) %></td>
+    <td><%= link_to 'Eliminar', finca, :confirm => '¿Está usted seguro/a?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Añadir una finca nueva', new_finca_path %>

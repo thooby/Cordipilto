@@ -1,0 +1,16 @@
+<h1>Editing agua</h1>
+
+<% form_for(@agua) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @agua %> |
+<%= link_to 'Back', aguas_path %>

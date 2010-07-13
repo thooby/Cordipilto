@@ -1,0 +1,2 @@
+module AdquisHelper
+end

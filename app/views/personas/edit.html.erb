@@ -1,0 +1,64 @@
+<h1>Editing persona</h1>
+
+<% form_for(@persona) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :finca_id %><br />
+    <%= f.text_field :finca_id %>
+  </p>
+  <p>
+    <%= f.label :nombre1 %><br />
+    <%= f.text_field :nombre1 %>
+  </p>
+  <p>
+    <%= f.label :nombre2 %><br />
+    <%= f.text_field :nombre2 %>
+  </p>
+  <p>
+    <%= f.label :apellido1 %><br />
+    <%= f.text_field :apellido1 %>
+  </p>
+  <p>
+    <%= f.label :apellido2 %><br />
+    <%= f.text_field :apellido2 %>
+  </p>
+  <p>
+    <%= f.label :fecha_nac %><br />
+    <%= f.date_select :fecha_nac %>
+  </p>
+  <p>
+    <%= f.label :genero_id %><br />
+    <%= f.text_field :genero_id %>
+  </p>
+  <p>
+    <%= f.label :alfabe_id %><br />
+    <%= f.text_field :alfabe_id %>
+  </p>
+  <p>
+    <%= f.label :naciona_id %><br />
+    <%= f.text_field :naciona_id %>
+  </p>
+  <p>
+    <%= f.label :direccion %><br />
+    <%= f.text_field :direccion %>
+  </p>
+  <p>
+    <%= f.label :profesion_id %><br />
+    <%= f.text_field :profesion_id %>
+  </p>
+  <p>
+    <%= f.label :parentesco_id %><br />
+    <%= f.text_field :parentesco_id %>
+  </p>
+  <p>
+    <%= f.label :cabeza_familia %><br />
+    <%= f.check_box :cabeza_familia %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @persona %> |
+<%= link_to 'Back', personas_path %>

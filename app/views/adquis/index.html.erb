@@ -1,0 +1,20 @@
+<h1>Listing adquis</h1>
+
+<table>
+  <tr>
+    <th>Descripcion</th>
+  </tr>
+
+<% @adquis.each do |adqui| %>
+  <tr>
+    <td><%=h adqui.descripcion %></td>
+    <td><%= link_to 'Show', adqui %></td>
+    <td><%= link_to 'Edit', edit_adqui_path(adqui) %></td>
+    <td><%= link_to 'Destroy', adqui, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New adqui', new_adqui_path %>

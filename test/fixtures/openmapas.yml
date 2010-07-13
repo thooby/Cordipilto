@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  codigo_html: MyString
+  municipio_id: 1
+
+two:
+  codigo_html: MyString
+  municipio_id: 1

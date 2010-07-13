@@ -1,0 +1,16 @@
+<h1>Editing adqui</h1>
+
+<% form_for(@adqui) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @adqui %> |
+<%= link_to 'Back', adquis_path %>

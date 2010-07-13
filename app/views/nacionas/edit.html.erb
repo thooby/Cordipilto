@@ -1,0 +1,16 @@
+<h1>Editing naciona</h1>
+
+<% form_for(@naciona) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @naciona %> |
+<%= link_to 'Back', nacionas_path %>

@@ -1,0 +1,15 @@
+<h1>New profun_suelo</h1>
+
+<% form_for(@profun_suelo) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', profun_suelos_path %>

@@ -1,0 +1,20 @@
+<h1>Listing topogras</h1>
+
+<table>
+  <tr>
+    <th>Descripcion</th>
+  </tr>
+
+<% @topogras.each do |topogra| %>
+  <tr>
+    <td><%=h topogra.descripcion %></td>
+    <td><%= link_to 'Show', topogra %></td>
+    <td><%= link_to 'Edit', edit_topogra_path(topogra) %></td>
+    <td><%= link_to 'Destroy', topogra, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New topogra', new_topogra_path %>

@@ -1,0 +1,2 @@
+module OpenmapasHelper
+end

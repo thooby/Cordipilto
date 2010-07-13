@@ -1,0 +1,16 @@
+<h1>Editing topogra</h1>
+
+<% form_for(@topogra) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @topogra %> |
+<%= link_to 'Back', topogras_path %>

@@ -1,0 +1,20 @@
+<h1>Listing verano_accesos</h1>
+
+<table>
+  <tr>
+    <th>Descripcion</th>
+  </tr>
+
+<% @verano_accesos.each do |verano_acceso| %>
+  <tr>
+    <td><%=h verano_acceso.descripcion %></td>
+    <td><%= link_to 'Show', verano_acceso %></td>
+    <td><%= link_to 'Edit', edit_verano_acceso_path(verano_acceso) %></td>
+    <td><%= link_to 'Destroy', verano_acceso, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New verano_acceso', new_verano_acceso_path %>

@@ -1,0 +1,20 @@
+<h1>Listing nacionas</h1>
+
+<table>
+  <tr>
+    <th>Descripcion</th>
+  </tr>
+
+<% @nacionas.each do |naciona| %>
+  <tr>
+    <td><%=h naciona.descripcion %></td>
+    <td><%= link_to 'Show', naciona %></td>
+    <td><%= link_to 'Edit', edit_naciona_path(naciona) %></td>
+    <td><%= link_to 'Destroy', naciona, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New naciona', new_naciona_path %>

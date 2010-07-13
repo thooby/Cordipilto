@@ -1,0 +1,22 @@
+<h1>Listing openmapas</h1>
+
+<table>
+  <tr>
+    <th>Codigo html</th>
+    <th>Municipio</th>
+  </tr>
+
+<% @openmapas.each do |openmapa| %>
+  <tr>
+    <td><%=h openmapa.codigo_html %></td>
+    <td><%=h openmapa.municipio_id %></td>
+    <td><%= link_to 'Show', openmapa %></td>
+    <td><%= link_to 'Edit', edit_openmapa_path(openmapa) %></td>
+    <td><%= link_to 'Destroy', openmapa, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New openmapa', new_openmapa_path %>

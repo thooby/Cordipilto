@@ -1,0 +1,16 @@
+<h1>Editing fertiliza</h1>
+
+<% form_for(@fertiliza) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @fertiliza %> |
+<%= link_to 'Back', fertilizas_path %>

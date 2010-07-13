@@ -1,0 +1,20 @@
+<h1>Listing parentescos</h1>
+
+<table>
+  <tr>
+    <th>Descripcion</th>
+  </tr>
+
+<% @parentescos.each do |parentesco| %>
+  <tr>
+    <td><%=h parentesco.descripcion %></td>
+    <td><%= link_to 'Show', parentesco %></td>
+    <td><%= link_to 'Edit', edit_parentesco_path(parentesco) %></td>
+    <td><%= link_to 'Destroy', parentesco, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New parentesco', new_parentesco_path %>

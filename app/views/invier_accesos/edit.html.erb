@@ -1,0 +1,16 @@
+<h1>Editing invier_acceso</h1>
+
+<% form_for(@invier_acceso) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @invier_acceso %> |
+<%= link_to 'Back', invier_accesos_path %>

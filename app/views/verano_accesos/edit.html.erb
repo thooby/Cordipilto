@@ -1,0 +1,16 @@
+<h1>Editing verano_acceso</h1>
+
+<% form_for(@verano_acceso) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @verano_acceso %> |
+<%= link_to 'Back', verano_accesos_path %>

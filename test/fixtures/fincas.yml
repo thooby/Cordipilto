@@ -1,0 +1,49 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  descripcion: MyString
+  agua_id: 1
+  area_tot: 1
+  area_cafe: 1
+  area_agric: 1
+  area_bosque: 1
+  area_potrero: 1
+  area_guat: 1
+  adqui_id: 1
+  altura: 1
+  lat: 1
+  lon: 1
+  municipio_id: 1
+  acceso_id: 1
+  invier_acceso_id: 1
+  verano_acceso_id: 1
+  tipo_suelo_id: 1
+  color_suelo_id: 1
+  profun_suelo_id: 1
+  topogra_id: 1
+  fertiliza_id: 1
+  comunidad_id: 1
+
+two:
+  descripcion: MyString
+  agua_id: 1
+  area_tot: 1
+  area_cafe: 1
+  area_agric: 1
+  area_bosque: 1
+  area_potrero: 1
+  area_guat: 1
+  adqui_id: 1
+  altura: 1
+  lat: 1
+  lon: 1
+  municipio_id: 1
+  acceso_id: 1
+  invier_acceso_id: 1
+  verano_acceso_id: 1
+  tipo_suelo_id: 1
+  color_suelo_id: 1
+  profun_suelo_id: 1
+  topogra_id: 1
+  fertiliza_id: 1
+  comunidad_id: 1

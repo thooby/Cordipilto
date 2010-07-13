@@ -1,0 +1,134 @@
+<% form_for(@finca) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </p>
+    <%= render :partial => 'form' %>
+  <p>
+    <%= f.label :agua_id %><br />
+<%=
+    @aguas =Agua.find(:all)
+    f.collection_select(:agua_id, @aguas, :id, :descripcion )
+%>
+  </p>
+  <p>
+    <%= f.label :area_tot %><br />
+    <%= f.text_field :area_tot %>
+  </p>
+  <p>
+    <%= f.label :area_cafe %><br />
+    <%= f.text_field :area_cafe %>
+  </p>
+  <p>
+    <%= f.label :area_agric %><br />
+    <%= f.text_field :area_agric %>
+  </p>
+  <p>
+    <%= f.label :area_bosque %><br />
+    <%= f.text_field :area_bosque %>
+  </p>
+  <p>
+    <%= f.label :area_potrero %><br />
+    <%= f.text_field :area_potrero %>
+  </p>
+  <p>
+    <%= f.label :area_guat %><br />
+    <%= f.text_field :area_guat %>
+  </p>
+  <p>
+    <%= f.label :adqui_id %><br />
+	<%=
+	    @adquis =Adqui.find(:all)
+	    f.collection_select(:adqui_id, @adquis, :id, :descripcion )
+	%>
+
+  </p>
+  <p>
+    <%= f.label :altura %><br />
+    <%= f.text_field :altura %>
+  </p>
+  <p>
+    <%= f.label :lat %><br />
+    <%= f.text_field :lat %>
+  </p>
+  <p>
+    <%= f.label :lon %><br />
+    <%= f.text_field :lon %>
+  </p>
+  <p>
+    <%= f.label :municipio_id %><br />
+    <%=  
+        @municipios = Municipio.find(:all)
+	    f.collection_select(:municipio_id, @municipios, :id, :nombre )
+	 %>
+  </p>
+  <p>
+    <%= f.label :acceso_id %><br />
+    <%=
+        @accesos = Acceso.find(:all)
+	    f.collection_select(:acceso_id, @accesos, :id, :descripcion )
+	 %>
+  </p>
+  <p>
+    <%= f.label :invier_acceso_id %><br />
+    <%= 
+    @invier_accesos = InvierAcceso.find(:all)
+    f.collection_select(:invier_acceso_id, @invier_accesos, :id, :descripcion )
+    %>
+  </p>
+  <p>
+    <%= f.label :verano_acceso_id %><br />
+    <%= 
+    @verano_accesos = VeranoAcceso.find(:all)
+    f.collection_select(:verano_acceso_id, @verano_accesos, :id, :descripcion )
+	 %>
+  </p>
+  <p>
+    <%= f.label :tipo_suelo_id %><br />
+    <%= 
+    @tipo_suelos = TipoSuelo.find(:all)
+    f.collection_select(:tipo_suelo_id, @tipo_suelos, :id, :descripcion )
+	 %>
+  </p>
+  <p>
+    <%= f.label :color_suelo_id %><br />
+    <%= 
+    @color_suelos = ColorSuelo.find(:all)
+    f.collection_select(:color_suelo_id, @color_suelos, :id, :descripcion )
+	 %>
+  </p>
+  <p>
+    <%= f.label :profun_suelo_id %><br />
+    <%= 
+    @profun_suelos = ProfunSuelo.find(:all)
+    f.collection_select(:profun_suelo_id, @profun_suelos, :id, :descripcion )
+	 %>
+  </p>
+  <p>
+    <%= f.label :topogra_id %><br />
+    <%= 
+    @topogras = Topogra.find(:all)
+    f.collection_select(:topogra_id, @topogras, :id, :descripcion )
+	 %>
+  </p>
+  <p>
+    <%= f.label :fertiliza_id %><br />
+    <%= 
+    @fertilizas = Fertiliza.find(:all)
+    f.collection_select(:fertiliza_id, @fertilizas, :id, :descripcion )
+	 %>
+  </p>
+  <p>
+    <%= f.label :comunidade_id %><br />
+    <%= 
+    @comunidades = Comunidade.find(:all)
+    f.collection_select(:comunidade_id, @comunidades, :id, :nombre )
+	 %>
+  </p>
+  <p>
+	<p>
+	    <%= f.submit 'Enviar' %>
+	  </p>
+	<% end %>
